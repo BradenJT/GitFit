@@ -8,6 +8,8 @@ namespace GitFit.Api.Repositories.Interfaces
         IQueryable<CheckIn> CheckIns();
         IQueryable<ClassEnrollment> ClassEnrollments();
         IQueryable<Class> Classes();
+        Task<bool> CreateMember(Member member);
+        Task<bool> DeleteMember(int id);
         IQueryable<Employee> Employees();
         IQueryable<EmployeeSchedule> EmployeeSchedules();
         IQueryable<Equipment> Equipment();
@@ -18,5 +20,6 @@ namespace GitFit.Api.Repositories.Interfaces
         IQueryable<MemberSubscription> MemberSubscriptions();
         IQueryable<Payment> Payments();
         IQueryable<Payroll> Payrolls();
+        Task<bool> UpdateMember(Member member);
     }
 }
